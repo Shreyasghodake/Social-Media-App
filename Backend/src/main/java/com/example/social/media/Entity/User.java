@@ -3,7 +3,7 @@ package com.example.social.media.Entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="employee")
+@Table(name="user")
 public class User {
     @Id
     @Column(name="user_id", length = 45)
@@ -11,9 +11,9 @@ public class User {
     private int userId;
     @Column(name = "name" , length = 255)
     private String name;
-    @Column(name="username", length = 45)
+    @Column(name="username", length = 45,unique = true)
     private String username;
-    @Column(name="email", length = 45)
+    @Column(name="email", length = 45,unique = true)
     private String email;
     @Column(name="password", length = 45)
     private String password;

@@ -2,7 +2,9 @@ package com.example.social.media.SocialMediaController;
 
 
 import com.example.social.media.DTO.UserDTO;
+import com.example.social.media.DTO.UserLoginDTO;
 import com.example.social.media.Entity.User;
+import com.example.social.media.Response.LoginResponse;
 import com.example.social.media.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -34,4 +36,9 @@ public class SocialMediaController {
 
     }
 
+    @RequestMapping(path = "login")
+    public ResponseEntity<?> UserLogin(@RequestBody UserLoginDTO userLogin) {
+        LoginResponse loginMessage = userService.loginEmplogin(userLogin);
+        return ResponseEntity.ok(loginMessage);
+    }
 }

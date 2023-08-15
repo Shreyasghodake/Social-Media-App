@@ -33,9 +33,9 @@ function UserRegistration() {
         }
     }
 
-    return <div className="Container mt-4">
+    return <div className="Container mt-4 d-flex align-items-center justify-content-center">
     <form>
-    <div class="form-group">
+    <div class="form-group" Style="width:300px;">
       <label for="name">Name</label>
       <input type="text" class="form-control " placeholder="Enter name"
       value = {name}
